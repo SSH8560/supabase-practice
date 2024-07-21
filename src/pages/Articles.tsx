@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlatList, SafeAreaView, View} from 'react-native';
 import AddArticleBadge from '../components/AddArticleBadge';
-import ArticlesHeader from '../components/ArticlesHeader';
+import ArticlesHeader from '../components/header/ArticlesHeader';
 import Separator from '../components/ui/Separator';
 import ArticleItem from '../components/ArticleItem';
 import {sub} from 'date-fns';

@@ -1,7 +1,7 @@
 import React from 'react';
 import {View} from 'react-native';
 import DefaultLayout from '../components/layout/DefaultLayout';
-import BackHeader from '../components/BackHeader';
+import BackHeader from '../components/header/BackHeader';
 import Input from '../components/ui/Input';
 import Button from '../components/ui/Button';
 
@@ -17,6 +17,7 @@ const Join = ({}: JoinProps) => {
         <Input label="이메일" />
         <Input label="비밀번호" secret />
         <Input label="비밀번호 확인" secret />
+        <Input label="닉네임" />
         <Button text="가입하기" onPress={handlePressJoin} />
       </View>
     </DefaultLayout>

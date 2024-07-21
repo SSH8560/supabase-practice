@@ -2,11 +2,11 @@ import React from 'react';
 import {Text, TouchableOpacity, View} from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 import {useNavigation} from '@react-navigation/native';
-import Header from './ui/Header';
+import Header from '../ui/Header';
 
 interface BackHeaderProps {
   title: string;
-  right?: React.ReactElement;
+  right?: React.ReactElement | boolean;
 }
 
 const BackHeader = ({title, right}: BackHeaderProps) => {

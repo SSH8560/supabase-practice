@@ -3,7 +3,7 @@ import {View} from 'react-native';
 import Input from '../components/ui/Input';
 import DefaultLayout from '../components/layout/DefaultLayout';
 import TextArea from '../components/ui/TextArea';
-import EditArticleHeader from '../components/EditArticleHeader';
+import EditArticleHeader from '../components/header/EditArticleHeader';
 
 const EditArticle = () => {
   const handlePressSave = () => {};

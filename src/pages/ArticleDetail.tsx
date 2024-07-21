@@ -1,9 +1,10 @@
 import React from 'react';
 import {ScrollView, Text, TextInput, View} from 'react-native';
-import BackHeader from '../components/BackHeader';
+import BackHeader from '../components/header/BackHeader';
 import DefaultLayout from '../components/layout/DefaultLayout';
 import Button from '../components/ui/Button';
 import Separator from '../components/ui/Separator';
+import ArticleDetailHeader from '../components/header/ArticleDetailHeader';
 
 const ArticleDetail = ({
   route: {
@@ -14,7 +15,7 @@ const ArticleDetail = ({
 
   return (
     <DefaultLayout>
-      <BackHeader title="제목" />
+      <ArticleDetailHeader title="제목" />
       <ScrollView style={{flex: 1}}>
         <View style={{paddingVertical: 8, paddingHorizontal: 16, gap: 8}}>
           <Text style={{fontSize: 18, fontWeight: '700'}}>제목</Text>

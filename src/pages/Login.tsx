@@ -3,7 +3,7 @@ import DefaultLayout from '../components/layout/DefaultLayout';
 import Button from '../components/ui/Button';
 import Input from '../components/ui/Input';
 import {View} from 'react-native';
-import BackHeader from '../components/BackHeader';
+import BackHeader from '../components/header/BackHeader';
 
 interface LoginProps {}
 
