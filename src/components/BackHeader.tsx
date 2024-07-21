@@ -6,9 +6,10 @@ import Header from './ui/Header';
 
 interface BackHeaderProps {
   title: string;
+  right?: React.ReactElement;
 }
 
-const BackHeader = ({title}: BackHeaderProps) => {
+const BackHeader = ({title, right}: BackHeaderProps) => {
   const navigation = useNavigation();
 
   return (
@@ -25,6 +26,7 @@ const BackHeader = ({title}: BackHeaderProps) => {
           <Text style={{fontSize: 20, fontWeight: '700'}}>{title}</Text>
         </View>
       }
+      right={right}
     />
   );
 };

@@ -1,13 +1,21 @@
 import React from 'react';
-import {SafeAreaView, View} from 'react-native';
-import Header from '../components/ui/Header';
-import BackHeader from '../components/BackHeader';
+import {View} from 'react-native';
+import Input from '../components/ui/Input';
+import DefaultLayout from '../components/layout/DefaultLayout';
+import TextArea from '../components/ui/TextArea';
+import EditArticleHeader from '../components/EditArticleHeader';
 
 const EditArticle = () => {
+  const handlePressSave = () => {};
+
   return (
-    <SafeAreaView>
-      <BackHeader title={'글 작성하기'} />
-    </SafeAreaView>
+    <DefaultLayout>
+      <EditArticleHeader title={'글 작성하기'} onPressSave={handlePressSave} />
+      <View style={{padding: 16, gap: 16, flex: 1}}>
+        <Input label="제목" />
+        <TextArea label="내용" />
+      </View>
+    </DefaultLayout>
   );
 };
 

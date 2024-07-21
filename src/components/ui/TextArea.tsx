@@ -1,24 +1,23 @@
 import React from 'react';
 import {StyleSheet, Text, TextInput, View} from 'react-native';
 
-interface InputProps {
+interface TextAreaProps {
   label: string;
   errroMessage?: string;
   value: string;
   onChange: (text: string) => void;
-  secret?: boolean;
 }
 
-const Input = ({label, errroMessage, value, onChange, secret}: InputProps) => {
+const TextArea = ({label, onChange, value, errroMessage}: TextAreaProps) => {
   const isError = Boolean(errroMessage);
 
   return (
-    <View style={{width: '100%'}}>
+    <View style={{flex: 1}}>
       <View style={[styles.inputContainer, isError && styles.error]}>
         <Text style={[styles.labelText, isError && styles.error]}>{label}</Text>
         <TextInput
+          multiline
           style={[styles.inputText]}
-          secureTextEntry={secret}
           onChangeText={onChange}
           value={value}
         />
@@ -42,12 +41,14 @@ const styles = StyleSheet.create({
     fontWeight: '700',
   },
   inputContainer: {
+    flex: 1,
     position: 'relative',
     borderRadius: 8,
     borderWidth: 0.5,
     borderColor: 'gray',
   },
   inputText: {
+    flex: 1,
     paddingVertical: 16,
     paddingHorizontal: 16,
     fontSize: 16,
@@ -61,4 +62,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default Input;
+export default TextArea;

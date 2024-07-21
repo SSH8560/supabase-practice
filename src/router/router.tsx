@@ -5,6 +5,7 @@ import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
 import EditArticle from '../pages/EditArticle';
 import Join from '../pages/Join';
 import ArticleDetail from '../pages/ArticleDetail';
+import Login from '../pages/Login';
 
 const BottomTab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -13,7 +14,7 @@ const MainBottomTab = () => {
   return (
     <BottomTab.Navigator screenOptions={{headerShown: false}}>
       <BottomTab.Screen name="Articles" component={Articles} />
-      <BottomTab.Screen name="Profile" component={Join} />
+      <BottomTab.Screen name="Profile" component={Login} />
     </BottomTab.Navigator>
   );
 };
